@@ -1,0 +1,25 @@
+.eventsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 110px 0 99px 0;
+}
+
+.eventsPage_title {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 104%;
+  text-transform: uppercase;
+  color: #162c4e;
+  opacity: 0.39;
+}
+
+.eventsList_wrapper {
+  width: 1705px;
+  height: 682px;
+  display: flex;
+  gap: 4px;
+  align-items: stretch;
+  justify-content: end;
+}

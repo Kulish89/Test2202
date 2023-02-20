@@ -1,0 +1,128 @@
+.event {
+  flex: 0 0 85px;
+  overflow: hidden;
+  display: flex;
+  transition: all 0.5s;
+}
+.event_active {
+  flex-grow: 1;
+}
+
+.event_description {
+  display: flex;
+  flex-direction: column-reverse;
+  /* background-color: #162c4e !important; */
+  background: rgba(18, 18, 18, 0.2);
+  background-blend-mode: darken;
+  background: linear-gradient(180deg, rgba(22, 44, 78, 0.2) 0%, #162c4e 100%);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  align-items: center;
+  flex-shrink: 0;
+  width: 85px;
+  height: 100%;
+  padding: 20px;
+  gap: 40px;
+}
+
+.event_id {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.event_title {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  color: #ffffff;
+  writing-mode: vertical-rl;
+  transform: scale(-1);
+}
+
+.event_card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.card_id {
+  position: absolute;
+  top: -38px;
+  left: -143px;
+  z-index: 4;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 380px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  color: rgba(255, 255, 255, 0.04);
+}
+
+.card_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: fill;
+  object-position: center;
+}
+
+.card_description {
+  width: 364px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: end;
+  gap: 12px;
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 50px 42px;
+  text-align: start;
+}
+
+.card_title {
+  font-family: "SF Pro Display";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.card_date {
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card_link {
+  color: #ffffff;
+  height: 62px;
+  width: 256px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 13px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-left: 7px solid white;
+}
+
+.card_link span {
+  font-family: "SF Pro Display";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.8);
+}
