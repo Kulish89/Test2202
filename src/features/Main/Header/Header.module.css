@@ -1,0 +1,37 @@
+.header {
+  position: relative;
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 460px;
+  background: url("../../../assets/images/spot-left.png") no-repeat;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 460px;
+  background: url("../../../assets/images/spot-right.png") no-repeat right top;
+}
+.header_content {
+  width: 190px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_Logolink {
+  height: 60px;
+}
+.header_Logolink img {
+  object-fit: fill;
+}
