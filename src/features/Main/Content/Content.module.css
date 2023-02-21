@@ -1,5 +1,6 @@
 .contentPage {
   padding: 93px 0 76px 0;
+  flex-grow: 1;
 }
 
 .contentPage_description {

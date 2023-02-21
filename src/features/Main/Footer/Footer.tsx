@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import s from "./Footer.module.css";
-import arrowRight from "../../../assets/icons/arrow-right.svg";
+import emailjs from "emailjs-com";
+import { ModalWindow } from "../../../common/components/Modal";
 
 export const Footer = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   const formik = useFormik({
     validate: (values) => {
       const errors: any = {};
@@ -19,9 +24,22 @@ export const Footer = () => {
     initialValues: {
       email: "",
     },
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-      formik.resetForm();
+    onSubmit: async (values) => {
+      // setIsSending(true);
+      emailjs
+        .send(
+          "service_r6ht33q",
+          "template_8byjsdo",
+          values,
+          "YWy8zsG0i5jr2R-VT"
+        )
+        .then((res) => {
+          formik.resetForm();
+          handleOpen();
+        })
+        .catch((error) => {
+          console.log("Error! Please try again later!");
+        });
     },
   });
   return (
@@ -45,9 +63,14 @@ export const Footer = () => {
         {formik.errors.email && formik.touched.email ? (
           <p className={s.error_message}>{formik.errors.email}</p>
         ) : null}
-        <button className={s.form_button} type="submit">
+        {/* <button className={s.form_button} type="submit">
           <img src={arrowRight} alt="" />
-        </button>
+        </button> */}
+        <ModalWindow
+          open={open}
+          handleClose={handleClose}
+          handleOpen={handleOpen}
+        />
       </form>
     </footer>
   );
