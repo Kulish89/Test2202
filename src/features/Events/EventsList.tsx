@@ -85,17 +85,19 @@ export const EventsList = () => {
   };
 
   return (
-    <div className={s.eventsList_wrapper}>
-      {eventsArray.map((ev, index) => {
-        return (
-          <Event
-            event={ev}
-            key={index}
-            isActive={ev.id === activeEvent}
-            setActive={onClickActiveEventHandler}
-          />
-        );
-      })}
+    <div className={s.eventsList}>
+      <div className={s.eventsList_wrapper}>
+        {eventsArray.map((ev, index) => {
+          return (
+            <Event
+              event={ev}
+              key={index}
+              isActive={ev.id === activeEvent}
+              setActive={onClickActiveEventHandler}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
