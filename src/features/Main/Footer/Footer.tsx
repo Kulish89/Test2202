@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import s from "./Footer.module.css";
 import emailjs from "emailjs-com";
 import { ModalWindow } from "../../../common/components/Modal";
+import arrowRight from "../../../assets/icons/arrow-right.svg";
 
 export const Footer = () => {
   const [open, setOpen] = useState(false);
@@ -63,15 +64,16 @@ export const Footer = () => {
         {formik.errors.email && formik.touched.email ? (
           <p className={s.error_message}>{formik.errors.email}</p>
         ) : null}
-        {/* <button className={s.form_button} type="submit">
-          <img src={arrowRight} alt="" />
-        </button> */}
         <ModalWindow
           open={open}
           handleClose={handleClose}
           handleOpen={handleOpen}
         />
       </form>
+      <a className={s.linkToEvents} href={"#eventsPage"}>
+        <span>Other events</span>
+        <img src={arrowRight} alt="" />
+      </a>
     </footer>
   );
 };

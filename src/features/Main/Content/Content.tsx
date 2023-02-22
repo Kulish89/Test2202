@@ -16,7 +16,12 @@ export const Content = () => {
         <p className={s.link_description}>
           Check our event page when you wait:
         </p>
-        <a className={s.link}>
+        <a
+          className={s.link}
+          href={"https://google.com"}
+          target={"_blank"}
+          rel="noreferrer"
+        >
           <span className={s.link_title}>Go to the event</span>
           <img className={s.link_icon} src={arrowRight} alt="" />
         </a>

@@ -5,7 +5,7 @@ import s from "./Main.module.css";
 
 export const Main = () => {
   return (
-    <div className={s.mainPage}>
+    <div className={s.mainPage} id={"mainPage"}>
       <Header />
       <Content />
       <Footer />

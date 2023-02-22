@@ -23,15 +23,67 @@
   width: 100%;
   height: 54px;
   background-image: url(../../../../assets/icons/wave-icon.svg);
+  background-size: contain;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.counter_title p {
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   color: #ffffff;
   text-align: center;
+}
+
+.title_days:before {
+  content: "Days";
+}
+
+.title_hours:before {
+  content: "Hours";
+}
+
+.title_minutes:before {
+  content: "Minutes";
+}
+
+.title_seconds:before {
+  content: "Seconds";
+}
+
+@media screen and (max-width: 1279px) {
+  .counterPage {
+    margin: 40px 0 40px 0;
+    gap: 12px;
+  }
+  .counter_item {
+    width: 64px;
+    gap: 6px;
+  }
+  .counter_points,
+  .counter_number {
+    font-size: 36px;
+  }
+  .counter_title {
+    height: 40px;
+    font-size: 12px;
+    background-image: url(../../../../assets/icons/small-wave-icon.svg);
+  }
+  .title_days:before {
+    content: "DD";
+  }
+  .title_hours:before {
+    content: "HH";
+  }
+  .title_minutes:before {
+    content: "MM";
+  }
+  .title_seconds:before {
+    content: "SS";
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .counterPage {
+    gap: 4px;
+  }
 }

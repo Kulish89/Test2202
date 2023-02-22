@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
 }
+
 .header::after {
   content: "";
   position: absolute;
@@ -22,6 +23,23 @@
   height: 460px;
   background: url("../../../assets/images/spot-right.png") no-repeat right top;
 }
+@media screen and (max-width: 1279px) {
+  .header {
+    padding-top: 100px;
+  }
+  .header::after {
+    width: 300px;
+    height: 260px;
+    background: url("../../../assets/images/spot-left-medium.png") no-repeat;
+  }
+  .header::before {
+    width: 300px;
+    height: 260px;
+    background: url("../../../assets/images/spot-right-meduim.png") no-repeat
+      right top;
+  }
+}
+
 .header_content {
   width: 190px;
   height: 60px;
@@ -34,4 +52,42 @@
 }
 .header_Logolink img {
   object-fit: fill;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding-top: 80px;
+  }
+  .header::after {
+    width: 170px;
+    height: 180px;
+    background: url("../../../assets/images/spot-left-small.png") no-repeat;
+  }
+  .header::before {
+    width: 170px;
+    height: 180px;
+    background: url("../../../assets/images/spot-right-small.png") no-repeat
+      right top;
+  }
+  .header_content {
+    width: 128px;
+    height: 40px;
+  }
+  .header_Logolink {
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  .header_Logolink img {
+    height: 40px;
+    width: 40px;
+  }
+  .textlink_title {
+    display: flex;
+    align-items: center;
+  }
+  .textlink_title img {
+    height: 31px;
+    width: 76px;
+  }
 }

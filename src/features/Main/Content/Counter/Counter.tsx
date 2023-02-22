@@ -27,30 +27,22 @@ export const Counter = () => {
     <div className={s.counterPage}>
       <div className={s.counter_item}>
         <p className={s.counter_number}>{diffDays}</p>
-        <div className={s.counter_title}>
-          <p>Days</p>
-        </div>
+        <div className={s.counter_title + " " + s.title_days}></div>
       </div>
       <span className={s.counter_points}>:</span>
       <div className={s.counter_item}>
         <p className={s.counter_number}>{diffH.toString().padStart(2, "0")}</p>
-        <div className={s.counter_title}>
-          <p>Hours</p>
-        </div>
+        <div className={s.counter_title + " " + s.title_hours}></div>
       </div>
       <span className={s.counter_points}>:</span>
       <div className={s.counter_item}>
         <p className={s.counter_number}>{diffM.toString().padStart(2, "0")}</p>
-        <div className={s.counter_title}>
-          <p>Minutes</p>
-        </div>
+        <div className={s.counter_title + " " + s.title_minutes}></div>
       </div>
       <span className={s.counter_points}>:</span>
       <div className={s.counter_item}>
         <p className={s.counter_number}>{diffS.toString().padStart(2, "0")}</p>
-        <div className={s.counter_title}>
-          <p>Seconds</p>
-        </div>
+        <div className={s.counter_title + " " + s.title_seconds}></div>
       </div>
     </div>
   );
