@@ -12,7 +12,9 @@
   left: 0;
   width: 500px;
   height: 460px;
+  opacity: 1;
   background: url("../../../assets/images/spot-left.png") no-repeat;
+  animation: appearanceLeftSpots 1.5s;
 }
 .header::before {
   content: "";
@@ -21,6 +23,8 @@
   right: 0;
   width: 500px;
   height: 460px;
+  opacity: 1;
+  animation: appearanceRightSpots 1.5s;
   background: url("../../../assets/images/spot-right.png") no-repeat right top;
 }
 @media screen and (max-width: 1279px) {
@@ -46,6 +50,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  opacity: 1;
+  position: relative;
+  top: 0;
+  animation: appearance 1.7s;
 }
 .header_Logolink {
   height: 60px;
@@ -89,5 +97,28 @@
   .textlink_title img {
     height: 31px;
     width: 76px;
+  }
+}
+
+/* ======================================================== */
+
+@keyframes appearance {
+  from {
+    opacity: 0;
+    top: -20px;
+  }
+}
+@keyframes appearanceLeftSpots {
+  from {
+    opacity: 0;
+    left: -200px;
+    top: -200px;
+  }
+}
+@keyframes appearanceRightSpots {
+  from {
+    opacity: 0;
+    right: -200px;
+    top: -200px;
   }
 }

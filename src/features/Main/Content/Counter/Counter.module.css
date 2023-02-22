@@ -2,6 +2,10 @@
   margin: 32px 0 72px 0;
   display: flex;
   justify-content: center;
+  position: relative;
+  top: 0;
+  opacity: 1;
+  animation: appearance 1.7s;
 }
 
 .counter_item {
@@ -85,5 +89,14 @@
 @media screen and (max-width: 767px) {
   .counterPage {
     gap: 4px;
+  }
+}
+
+/* ==================================== */
+
+@keyframes appearance {
+  from {
+    opacity: 0;
+    top: -15px;
   }
 }

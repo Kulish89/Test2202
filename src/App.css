@@ -3,4 +3,5 @@
   max-width: 1920px;
   background-color: #ffffff;
   margin: 0 auto;
+  overflow: hidden;
 }
